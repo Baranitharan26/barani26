@@ -1,14 +1,17 @@
 import java.util.HashMap;
 public class Isomorphic {
 
-static boolean isIsomorphic(String s, String t) {
+static boolean isIsomorphic(String s, String t)
+{
 
 s= s.toLowerCase();
 t = t.toLowerCase();
-if(s.length()!=t.length()){
+if(s.length()!=t.length())
+{
     return false;
 }
-if(s.equalsIgnoreCase(t)){
+if(s.equalsIgnoreCase(t))
+{
     return true;
 }
     HashMap<Character,Integer> mapOfFirst = new HashMap<Character,Integer>();
@@ -26,7 +29,8 @@ if(s.equalsIgnoreCase(t)){
         }
 
     }
-    for(int i =0;i<t.length();i++){
+    for(int i =0;i<t.length();i++)
+    {
 
         if(mapOfSec.get(t.toCharArray()[i])!=null){
 
@@ -41,10 +45,12 @@ if(s.equalsIgnoreCase(t)){
     char[] sCharArray_Fir = s.toCharArray();
     char[] sCharArray_Sec= t.toCharArray();
 
-    for(int i = 0 ; i< s.length();i++){
+    for(int i = 0 ; i< s.length();i++)
+    {
         int ch1 = mapOfFirst.get(sCharArray_Fir[i]);
         int ch2 = mapOfSec.get(sCharArray_Sec[i]);
-        if(ch1!=ch2){
+        if(ch1!=ch2)
+        {
             return false;
         }
     }
